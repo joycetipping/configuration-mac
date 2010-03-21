@@ -1,0 +1,15 @@
+set mouse=a
+set number
+set nowrap
+set tabstop=2
+set expandtab
+set shiftwidth=2
+set autoindent
+set hlsearch
+set ignorecase
+
+au BufRead,BufNewFile *.cltex    set filetype=cltex
+au BufRead,BufNewFile *.gnarly   set filetype=gnarly
+au BufRead,BufNewFile *.lp       set filetype=lispwithparagraphs
+au BufRead,BufNewFile *.ocamltex set filetype=ocamltex
+au BufRead,BufNewFile *.scala    set filetype=scala
