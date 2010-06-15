@@ -1,4 +1,3 @@
-set mouse=a
 set number
 set nowrap
 set tabstop=2
@@ -7,6 +6,10 @@ set shiftwidth=2
 set autoindent
 set hlsearch
 set ignorecase
+set nojs
+
+nnoremap s o<ESC>
+nnoremap S O<ESC>
 
 au BufRead,BufNewFile *.cltex    set filetype=cltex
 au BufRead,BufNewFile *.gnarly   set filetype=gnarly
