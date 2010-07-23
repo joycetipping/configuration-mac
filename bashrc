@@ -104,3 +104,6 @@ alias remove='/bin/rm'
 alias rm='echo Use remove'
 alias sus='sudo pm-suspend'
 alias x='startx & sleep 1 && logout'
+
+alias guile='rlwrap guile'
+alias jdb='rlwrap jdb'
