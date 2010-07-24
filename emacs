@@ -1,28 +1,35 @@
-;; Math mode for LaTeX
-(add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
-
-
-;; Spellcheck in LaTex mode
-(add-hook `latex-mode-hook `flyspell-mode)
-(add-hook `tex-mode-hook `flyspell-mode)
-(add-hook `bibtex-mode-hook `flyspell-mode)
- 
-
-;; Show line-number and column-number in the mode line
-(line-number-mode 1)
-(column-number-mode 1)
+;; Hooks
+(add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)                              ; math mode for LaTeX
+(add-hook `latex-mode-hook `flyspell-mode)                                ; spellcheck in LaTeX mode
+(add-hook `tex-mode-hook `flyspell-mode)                                  ; spellcheck in LaTeX mode
+(add-hook `bibtex-mode-hook `flyspell-mode)                               ; spellcheck in LaTeX mode
 
 
 ;; Mouse, keyboard, and scrolling
-(mouse-wheel-mode t)                                   ;; enable mouse
-;; (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; scroll one line at a time
-(setq mouse-wheel-scroll-amount '(1))                  ;; scroll one line at a time
-(setq mouse-wheel-progressive-speed nil)               ;; Don't accelerate scrolling
-(setq mouse-wheel-follow-mouse 't)                     ;; Scroll window under mouse
-(setq scroll-step 1)                                   ;; keyboard scroll one line at a time
-(setq scroll-preserve-screen-position t)               ;; preserve screen position after page-up / page-down
+(mouse-wheel-mode t)                                                      ; enable mouse
+;(setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))                      ; scroll one line at a time
+(setq mouse-wheel-scroll-amount '(1))                                     ; scroll one line at a time
+(setq mouse-wheel-progressive-speed nil)                                  ; Don't accelerate scrolling
+(setq mouse-wheel-follow-mouse 't)                                        ; Scroll window under mouse
+(setq scroll-step 1)                                                      ; keyboard scroll one line at a time
+(setq scroll-preserve-screen-position t)                                  ; preserve screen position after page-up / page-down
+
+
+;; Appearance
+(line-number-mode 1)                                                      ; show line number in the mode line
+(column-number-mode 1)                                                    ; show column number in the mode line
+(setq-default fill-column 100)                                            ; set fill column at 100
+(setq auto-fill-mode 1)                                                   ; turns on text wrapping
+(set-face-attribute 'default nil :font "Inconsolata" :height 100)         ; set default font to Inconsolata, 10pt
 
 
 ;; Indentation, tabs
-(setq-default indent-tabs-mode nil)                    ;; indent with spaces only (global)
-(setq-default default-tab-width 2)                     ;; set tab width to 2 (global)
+(setq-default indent-tabs-mode nil)                                       ; indent with spaces only (global)
+(setq default-tab-width 2)                                                ; set tab width to 2
+(setq standard-indent 2)                                                  ; set standard indent to 2
+
+
+;; Backup files
+(setq make-backup-files t)                                                ; enable backup files
+(setq version-control t)                                                  ; enable versioning with default values
+(setq backup-directory-alist (quote ((".*" . "~/.emacs_backups/"))))      ; put backup files in this directory
