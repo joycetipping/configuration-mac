@@ -1,0 +1,9 @@
+#!/bin/bash
+
+ln -s /home/joycetipping/configuration/vim/vimrc          /home/joycetipping/.vimrc
+ln -s /home/joycetipping/configuration/emacs              /home/joycetipping/.emacs
+
+ln -s /home/joycetipping/configuration/bash/bashrc        /home/joycetipping/.bashrc
+ln -s /home/joycetipping/configuration/bash/bash_aliases  /home/joycetipping/.bash_aliases
+
+ln -s /home/joycetipping/configuration/xinitrc            /home/joycetipping/.xinitrc
