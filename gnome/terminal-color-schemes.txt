@@ -1,7 +1,0 @@
-Nightflower:
-'000000', '00ff00', 'ffff55', 'ff00ff', '66aaff', 'ee82ee', '00ffff', 'ffc0cb', 
-'000000', '00cd00', 'cd0000', 'cd00cd', '3366ff', '7d26cd', '00cdcd', '770077', 
-
-Dayflower:
-'000000', '008b00', 'ee0000', '8b008b', '0000cd', '551a8b', '00cdcd', 'ffc0cb', 
-'000000', '00ff00', 'ffff55', 'ff00ff', '3366ff', 'ee82ee', '00cdcd', 'ffccff', 

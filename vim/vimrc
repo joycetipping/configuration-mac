@@ -1,28 +1,41 @@
-"*** Basic ***"
+" Basic " {{{
+
 set autoindent
 set expandtab
-set foldlevel=10
+set foldmethod=marker
 set hlsearch
 set ignorecase
+set modeline
+set modelines=5
 set mouse=a
 set nojs
 set nowrap
 set number
 set shiftwidth=2
+set showcmd
 set tabstop=2
 
+"}}}
 
-"*** Key Mappings ***"
+" Key Mappings " {{{
+
 nnoremap s o<ESC>
 nnoremap S O<ESC>
 
+"}}}
 
-"*** Folds ***"
-au BufWinLeave * mkview
-au BufWinEnter * silent loadview
+" Folds " {{{
 
+"au BufWinLeave        *          mkview
+"au BufWinEnter        *          silent loadview
+"au BufWrite           *          mkview
+"au BufRead            *          silent loadview
+"au BufRead,BufNewFile *.txt      set foldmethod=indent
 
-"*** Special Filetypes ***"
+"}}}
+
+" Special Filetypes " {{{
+
 au BufRead,BufNewFile *.cltex    set filetype=cltex
 au BufRead,BufNewFile *.gnarly   set filetype=gnarly
 au BufRead,BufNewFile *.ljs      set filetype=ljs
@@ -30,9 +43,4 @@ au BufRead,BufNewFile *.lp       set filetype=lispwithparagraphs
 au BufRead,BufNewFile *.ocamltex set filetype=ocamltex
 au BufRead,BufNewFile *.scala    set filetype=scala
 
-
-"*** Vim-Latex ***"
-filetype plugin on           " Required  : This makes vim invoke Latex-Suite when you open a tex file.
-set grepprg=grep\ -nH\ $*    " Important : Set your grep program to always generate a file-name.
-filetype indent on           " Optional  : This enables automatic indentation as you type.
-let g:tex_flavor='latex'     " Optional  : Changes the default filetype from 'plaintex' back to 'tex'.
+"}}}
