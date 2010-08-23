@@ -660,7 +660,7 @@ EOF
 );
 __t0YL9JkFCVdlO7ds2sLp05hryrB0P63muZGtvX6yB3Y
 
-meta::setting('gnome-terminal', <<'__17MX62HotdqjNkluLiszH6kQ05hh9y1g3ClFeuIJSgg');
+meta::setting('gnome-terminal', <<'__Az+tnLILNsfV+aEuV2kFhtNB4VMbFENhh+V9PxQ0mB0');
 my $gnome_terminal = gconf_setter ('/apps/gnome-terminal/global/');
 &$gnome_terminal (<<EOF
   list:string    *    profile_list     *    [Default,Profile0,Profile1]    *
@@ -670,20 +670,20 @@ EOF
 
 my $font = 'Inconsolata Medium 10';
 
-my $default = gconf_setter ('/apps/gnome-terminal/profiles/Default/');
-&$default (<<EOF
-  bool      *    default_show_menubar *    false                  *
-  bool      *    silent_bell          *    true                   *
-  bool      *    use_system_font      *    false                  *
-  bool      *    use_theme_colors     *    true                   *
-  float     *    background_darkness  *    0.85                   *    Range 0 - 1
-  int       *    scrollback_lines     *    20000                  *
-  string    *    background_type      *    transparent            *
-  string    *    cursor_shape         *    underline              *
-  string    *    font                 *    $font                  *
-  string    *    scrollbar_position   *    hidden                 *
-EOF
-);
+#my $default = gconf_setter ('/apps/gnome-terminal/profiles/Default/');
+#&$default (<<EOF
+#  bool      *    default_show_menubar *    false                  *
+#  bool      *    silent_bell          *    true                   *
+#  bool      *    use_system_font      *    false                  *
+#  bool      *    use_theme_colors     *    true                   *
+#  float     *    background_darkness  *    0.85                   *    Range 0 - 1
+#  int       *    scrollback_lines     *    20000                  *
+#  string    *    background_type      *    transparent            *
+#  string    *    cursor_shape         *    underline              *
+#  string    *    font                 *    $font                  *
+#  string    *    scrollbar_position   *    hidden                 *
+#EOF
+#);
 
 
 my @nightflower_colors  = ('000000', '00ff00', 'ffff55', 'ff00ff', '66aaff', 'ee82ee', '00ffff', 'ffc0cb', 
@@ -732,7 +732,7 @@ my $dayflower = gconf_setter ('/apps/gnome-terminal/profiles/Profile1/');
   string    *    visible_name         *    dayflower              *
 EOF
 );
-__17MX62HotdqjNkluLiszH6kQ05hh9y1g3ClFeuIJSgg
+__Az+tnLILNsfV+aEuV2kFhtNB4VMbFENhh+V9PxQ0mB0
 
 meta::setting('metacity', <<'__xqvra85qKlMKd51XZ+7TlytnFBLzdvlK4MmQXGD4boc');
 my $metacity_general = gconf_setter ('/apps/metacity/general/');
@@ -752,12 +752,14 @@ EOF
 );
 __xqvra85qKlMKd51XZ+7TlytnFBLzdvlK4MmQXGD4boc
 
-meta::setting('other', <<'__jwvhIVDcLXxvBhSsejDNhjCrYVJJq4ZXtxGaH+R+GFw');
+meta::setting('other', <<'__bIqq+/13Astyg6cOHp3IwR1TpbAz9dKB6EbZJXDSL80');
 my $apps = gconf_setter ('/apps/');
 &$apps (<<EOF
-  bool    *    gnome-screensaver/lock_enabled       *    false    *
-  bool    *    nautilus/preferences/show_desktop    *    false    *
-  string  *    gnome-power-manager/buttons/lid_ac   *    blank    *
+  bool    *    gnome-power-manager/lock/suspend                   *    false    *
+  bool    *    gnome-power-manager/lock/use_screensaver_settings  *    false    *
+  bool    *    gnome-screensaver/lock_enabled                     *    false    *
+  bool    *    nautilus/preferences/show_desktop                  *    false    *
+  string  *    gnome-power-manager/buttons/lid_ac                 *    blank    *
 EOF
 );
 
@@ -768,7 +770,7 @@ my $desktop = gconf_setter ('/desktop/');
   string  *    gnome/applications/browser/exec      *    /opt/google/chrome/google-chrome  *
 EOF
 );
-__jwvhIVDcLXxvBhSsejDNhjCrYVJJq4ZXtxGaH+R+GFw
+__bIqq+/13Astyg6cOHp3IwR1TpbAz9dKB6EbZJXDSL80
 
 meta::setting('panel', <<'__AVaeMM/TUTis8cWfuLiIn20hodTDN0kHc7xeGUiuMUs');
 my $general = gconf_setter ('/apps/panel/general/');
