@@ -752,15 +752,10 @@ EOF
 );
 __xqvra85qKlMKd51XZ+7TlytnFBLzdvlK4MmQXGD4boc
 
-meta::setting('other', <<'__aBQ4kIZg1PhJUZyHOLg7EZgwr+spnSFycyjvI5bbzhc');
+meta::setting('other', <<'__hcM0K1FJ3kkOeyDMJ/yOuPVWhG2cJLpaqQAA/p84ucM');
 my $apps = gconf_setter ('/apps/');
 &$apps (<<EOF
-  bool    *    gnome-power-manager/lock/suspend                   *    false    *
-  bool    *    gnome-power-manager/lock/use_screensaver_settings  *    false    *
-  bool    *    gnome-screensaver/lock_enabled                     *    false    *
   bool    *    nautilus/preferences/show_desktop                  *    false    *
-  string  *    gnome-power-manager/buttons/lid_ac                 *    blank    *
-  int     *    gnome-power-manager/timeout/sleep_computer_ac      *    3600     *    Time in seconds
 EOF
 );
 
@@ -771,7 +766,7 @@ my $desktop = gconf_setter ('/desktop/');
   string  *    gnome/applications/browser/exec      *    /opt/google/chrome/google-chrome  *
 EOF
 );
-__aBQ4kIZg1PhJUZyHOLg7EZgwr+spnSFycyjvI5bbzhc
+__hcM0K1FJ3kkOeyDMJ/yOuPVWhG2cJLpaqQAA/p84ucM
 
 meta::setting('panel', <<'__AVaeMM/TUTis8cWfuLiIn20hodTDN0kHc7xeGUiuMUs');
 my $general = gconf_setter ('/apps/panel/general/');
@@ -800,6 +795,23 @@ my $applets = gconf_setter ('/apps/panel/applets/');
 EOF
 );
 __AVaeMM/TUTis8cWfuLiIn20hodTDN0kHc7xeGUiuMUs
+
+meta::setting('power-management', <<'__1dYYvUGsoSfnhvwr89jRZcdp/3tpL3e19IU8Vl9rGEg');
+my $power_manager = gconf_setter ('/apps/gnome-power-manager/');
+&$power_manager (<<EOF
+  bool    *    lock/suspend                   *    false    *
+  bool    *    lock/use_screensaver_settings  *    false    *
+  int     *    timeout/sleep_computer_ac      *    3600     *    Time in seconds
+  string  *    buttons/lid_ac                 *    blank    *
+EOF
+);
+
+my $screensaver = gconf_setter ('/apps/gnome-screensaver/');
+&$screensaver (<<EOF
+  bool    *    lock_enabled                   *    false    *
+EOF
+);
+__1dYYvUGsoSfnhvwr89jRZcdp/3tpL3e19IU8Vl9rGEg
 
 meta::internal('runtime', <<'__YPmIzwZkTg8URmPfjiwGRG4VDUF2ZCJqTEz+gjETYLQ');
 my $initial_state = sha256_base64 serialize();
