@@ -752,7 +752,7 @@ EOF
 );
 __xqvra85qKlMKd51XZ+7TlytnFBLzdvlK4MmQXGD4boc
 
-meta::setting('other', <<'__bIqq+/13Astyg6cOHp3IwR1TpbAz9dKB6EbZJXDSL80');
+meta::setting('other', <<'__aBQ4kIZg1PhJUZyHOLg7EZgwr+spnSFycyjvI5bbzhc');
 my $apps = gconf_setter ('/apps/');
 &$apps (<<EOF
   bool    *    gnome-power-manager/lock/suspend                   *    false    *
@@ -760,6 +760,7 @@ my $apps = gconf_setter ('/apps/');
   bool    *    gnome-screensaver/lock_enabled                     *    false    *
   bool    *    nautilus/preferences/show_desktop                  *    false    *
   string  *    gnome-power-manager/buttons/lid_ac                 *    blank    *
+  int     *    gnome-power-manager/timeout/sleep_computer_ac      *    3600     *    Time in seconds
 EOF
 );
 
@@ -770,7 +771,7 @@ my $desktop = gconf_setter ('/desktop/');
   string  *    gnome/applications/browser/exec      *    /opt/google/chrome/google-chrome  *
 EOF
 );
-__bIqq+/13Astyg6cOHp3IwR1TpbAz9dKB6EbZJXDSL80
+__aBQ4kIZg1PhJUZyHOLg7EZgwr+spnSFycyjvI5bbzhc
 
 meta::setting('panel', <<'__AVaeMM/TUTis8cWfuLiIn20hodTDN0kHc7xeGUiuMUs');
 my $general = gconf_setter ('/apps/panel/general/');
