@@ -1,0 +1,1 @@
+/home/joycetipping/projects/github/sdoc/vim/plugin/sdoc.vim
