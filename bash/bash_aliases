@@ -3,6 +3,7 @@
 export EDITOR=/usr/bin/vim
 export PATH="$PATH:~/bin:."
 
+alias cpl='cp -d'
 alias remove='/bin/rm'
 alias rm='echo Use remove'
 
@@ -16,4 +17,5 @@ alias u7='cd ../../../../../../../'
 
 alias guile='rlwrap guile'
 alias jdb='rlwrap jdb'
+alias luajit='luajit-2.0.0-beta2'
 alias nodedoc='man /home/joycetipping/projects/github/node/doc/node.1'

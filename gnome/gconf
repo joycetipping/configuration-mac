@@ -660,7 +660,7 @@ EOF
 );
 __t0YL9JkFCVdlO7ds2sLp05hryrB0P63muZGtvX6yB3Y
 
-meta::setting('gnome-terminal', <<'__Az+tnLILNsfV+aEuV2kFhtNB4VMbFENhh+V9PxQ0mB0');
+meta::setting('gnome-terminal', <<'__Bbol0jE+GUfz4cceW4N/QSHyVZwusabvnUsNZkok2is');
 my $gnome_terminal = gconf_setter ('/apps/gnome-terminal/global/');
 &$gnome_terminal (<<EOF
   list:string    *    profile_list     *    [Default,Profile0,Profile1]    *
@@ -668,7 +668,8 @@ my $gnome_terminal = gconf_setter ('/apps/gnome-terminal/global/');
 EOF
 );
 
-my $font = 'Inconsolata Medium 10';
+#my $font = 'Inconsolata Medium 10';
+my $font = 'Monospace Bold 9';
 
 #my $default = gconf_setter ('/apps/gnome-terminal/profiles/Default/');
 #&$default (<<EOF
@@ -692,6 +693,7 @@ my $nightflower_palette = join ':', map {s/(..)(..)(..)/#\1\1\2\2\3\3/; $_} @nig
 
 my $nightflower = gconf_setter ('/apps/gnome-terminal/profiles/Profile0/');
 &$nightflower (<<EOF
+  bool      *    allow_bold           *    false                  *
   bool      *    default_show_menubar *    false                  *
   bool      *    silent_bell          *    true                   *
   bool      *    use_system_font      *    false                  *
@@ -716,6 +718,7 @@ my $dayflower_palette = join ':', map {s/(..)(..)(..)/#\1\1\2\2\3\3/; $_} @dayfl
 
 my $dayflower = gconf_setter ('/apps/gnome-terminal/profiles/Profile1/');
 &$dayflower (<<EOF
+  bool      *    allow_bold           *    false                  *
   bool      *    default_show_menubar *    false                  *
   bool      *    silent_bell          *    true                   *
   bool      *    use_system_font      *    false                  *
@@ -732,7 +735,7 @@ my $dayflower = gconf_setter ('/apps/gnome-terminal/profiles/Profile1/');
   string    *    visible_name         *    dayflower              *
 EOF
 );
-__Az+tnLILNsfV+aEuV2kFhtNB4VMbFENhh+V9PxQ0mB0
+__Bbol0jE+GUfz4cceW4N/QSHyVZwusabvnUsNZkok2is
 
 meta::setting('metacity', <<'__xqvra85qKlMKd51XZ+7TlytnFBLzdvlK4MmQXGD4boc');
 my $metacity_general = gconf_setter ('/apps/metacity/general/');
@@ -752,21 +755,24 @@ EOF
 );
 __xqvra85qKlMKd51XZ+7TlytnFBLzdvlK4MmQXGD4boc
 
-meta::setting('other', <<'__hcM0K1FJ3kkOeyDMJ/yOuPVWhG2cJLpaqQAA/p84ucM');
+meta::setting('other', <<'__Radr62xv2626wM/0P6hF1ADuqnOGBdJsR7Z6t/I+O0Q');
 my $apps = gconf_setter ('/apps/');
 &$apps (<<EOF
-  bool    *    nautilus/preferences/show_desktop                  *    false    *
+  bool    *    nautilus/preferences/show_desktop                  *    false     *
+  string  *    gnome_settings_daemon/keybindings/volume_down      *    \<Alt\>a  *
+  string  *    gnome_settings_daemon/keybindings/volume_up        *    \<Alt\>q  *
+  string  *    gnome_settings_daemon/keybindings/volume_mute      *    \<Alt\>z  *
 EOF
 );
 
 my $desktop = gconf_setter ('/desktop/');
 &$desktop (<<EOF
   bool    *    gnome/sound/event_sounds             *    false                             *
-  float   *    gnome/font_rendering/dpi             *    84                                *
+  float   *    gnome/font_rendering/dpi             *    72                                *
   string  *    gnome/applications/browser/exec      *    /opt/google/chrome/google-chrome  *
 EOF
 );
-__hcM0K1FJ3kkOeyDMJ/yOuPVWhG2cJLpaqQAA/p84ucM
+__Radr62xv2626wM/0P6hF1ADuqnOGBdJsR7Z6t/I+O0Q
 
 meta::setting('panel', <<'__AVaeMM/TUTis8cWfuLiIn20hodTDN0kHc7xeGUiuMUs');
 my $general = gconf_setter ('/apps/panel/general/');
