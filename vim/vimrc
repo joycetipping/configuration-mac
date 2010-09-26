@@ -7,7 +7,7 @@ set hlsearch
 set ignorecase
 set modeline
 set modelines=5
-set mouse=
+set mouse=a
 set nojs
 set nowrap
 set number
