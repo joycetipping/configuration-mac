@@ -1,8 +1,16 @@
 #!/bin/bash
 
-sudo aptitude install mysql-server
-sudo aptitude safe-upgrade
-sudo aptitude install  \
+# 
+# A script for installing my packages; intended to run overnight.
+
+# Install this first because the setup will prompt for a root password, which will block the rest of the process.
+aptitude install mysql-server
+
+# Install the rest of the packages, upgrading before and after.
+aptitude update
+aptitude safe-upgrade
+
+aptitude install  \
   apache2  \
   apt-rdepends  \
   auctex  \
@@ -50,4 +58,8 @@ sudo aptitude install  \
   xsel  \
   youtube-dl
 
-sudo aptitude safe-upgrade
+aptitude update
+aptitude safe-upgrade
+
+# Set up symlink in /var/www/ to my local public_html
+ln -s /home/joycetipping/public_html/ /var/www/jt

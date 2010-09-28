@@ -1,9 +1,12 @@
 #!/bin/bash
 
+# Install essential packages
 sudo aptitude install acpitool compizconfig-settings-manager git-core gnome-themes-extras htop openssh-server vim-gnome
 
+# Run gconf settings
 /home/joycetipping/configuration/gnome/gconf apply
 
+# Set up symlinks
 ln -s /home/joycetipping/configuration/vim/vim            /home/joycetipping/.vim
 ln -s /home/joycetipping/configuration/vim/vimrc          /home/joycetipping/.vimrc
 ln -s /home/joycetipping/configuration/emacs              /home/joycetipping/.emacs
