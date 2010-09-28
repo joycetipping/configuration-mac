@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo aptitude install acpitool compizconfig-settings-manager git-core gnome-themes-extras htop openssh-server vim-gnome
+
 /home/joycetipping/configuration/gnome/gconf apply
 
 ln -s /home/joycetipping/configuration/vim/vim            /home/joycetipping/.vim
