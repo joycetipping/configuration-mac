@@ -755,13 +755,13 @@ EOF
 );
 __xqvra85qKlMKd51XZ+7TlytnFBLzdvlK4MmQXGD4boc
 
-meta::setting('other', <<'__Radr62xv2626wM/0P6hF1ADuqnOGBdJsR7Z6t/I+O0Q');
+meta::setting('other', <<'__7o0JJH0x4n6wxMFi0rVYuW4aVjyT9tiwmGtRDm9DUnw');
 my $apps = gconf_setter ('/apps/');
 &$apps (<<EOF
   bool    *    nautilus/preferences/show_desktop                  *    false     *
-  string  *    gnome_settings_daemon/keybindings/volume_down      *    \<Alt\>a  *
-  string  *    gnome_settings_daemon/keybindings/volume_up        *    \<Alt\>q  *
-  string  *    gnome_settings_daemon/keybindings/volume_mute      *    \<Alt\>z  *
+  string  *    gnome_settings_daemon/keybindings/volume_down      *    \<Ctrl\>\<Alt\>a  *
+  string  *    gnome_settings_daemon/keybindings/volume_up        *    \<Ctrl\>\<Alt\>q  *
+  string  *    gnome_settings_daemon/keybindings/volume_mute      *    \<Ctrl\>\<Alt\>z  *
 EOF
 );
 
@@ -772,7 +772,7 @@ my $desktop = gconf_setter ('/desktop/');
   string  *    gnome/applications/browser/exec      *    /opt/google/chrome/google-chrome  *
 EOF
 );
-__Radr62xv2626wM/0P6hF1ADuqnOGBdJsR7Z6t/I+O0Q
+__7o0JJH0x4n6wxMFi0rVYuW4aVjyT9tiwmGtRDm9DUnw
 
 meta::setting('panel', <<'__AVaeMM/TUTis8cWfuLiIn20hodTDN0kHc7xeGUiuMUs');
 my $general = gconf_setter ('/apps/panel/general/');

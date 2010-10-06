@@ -19,3 +19,6 @@ alias guile='rlwrap guile'
 alias jdb='rlwrap jdb'
 alias luajit='luajit-2.0.0-beta2'
 alias nodedoc='man /home/joycetipping/projects/github/node/doc/node.1'
+
+# For ruby version manager (rvm)
+[[ -s "/home/joycetipping/.rvm/scripts/rvm" ]] && . "/home/joycetipping/.rvm/scripts/rvm"

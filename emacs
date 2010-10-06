@@ -3,6 +3,9 @@
 (add-hook `latex-mode-hook `flyspell-mode)                                ; spellcheck in LaTeX mode
 (add-hook `tex-mode-hook `flyspell-mode)                                  ; spellcheck in LaTeX mode
 (add-hook `bibtex-mode-hook `flyspell-mode)                               ; spellcheck in LaTeX mode
+(add-hook 'text-mode-hook '(lambda nil
+  (auto-fill-mode 1)                                                      ; turn on auto-fill-mode
+  (setq fill-column 100)))                                                ; set fill column at 100
 
 
 ;; Mouse, keyboard, and scrolling
@@ -18,9 +21,9 @@
 ;; Appearance
 (line-number-mode 1)                                                      ; show line number in the mode line
 (column-number-mode 1)                                                    ; show column number in the mode line
-(setq-default fill-column 100)                                            ; set fill column at 100
-(setq auto-fill-mode 1)                                                   ; turns on text wrapping
 (set-face-attribute 'default nil :font "Inconsolata" :height 100)         ; set default font to Inconsolata, 10pt
+;; (add-hook 'text-mode-hook 'turn-on-auto-fill)                          ; turn on auto-fill-mode
+;; (setq-default fill-column 100)                                         ; set fill column at 100
 
 
 ;; Indentation, tabs
