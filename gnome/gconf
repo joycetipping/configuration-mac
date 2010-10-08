@@ -660,38 +660,36 @@ EOF
 );
 __t0YL9JkFCVdlO7ds2sLp05hryrB0P63muZGtvX6yB3Y
 
-meta::setting('gnome-terminal', <<'__Bbol0jE+GUfz4cceW4N/QSHyVZwusabvnUsNZkok2is');
+meta::setting('gnome-terminal', <<'__UF3w3N9Ll2RobsHmQMVajxe77grCtKjCDQtS3I2grzA');
 my $gnome_terminal = gconf_setter ('/apps/gnome-terminal/global/');
 &$gnome_terminal (<<EOF
-  list:string    *    profile_list     *    [Default,Profile0,Profile1]    *
-  string         *    default_profile  *    Profile0                       *
+  list:string    *    profile_list     *    [Default,Nightflower,Dayflower,Standard]  *
+  string         *    default_profile  *    Nightflower                               *
 EOF
 );
 
 #my $font = 'Inconsolata Medium 10';
 my $font = 'Monospace Bold 9';
 
-#my $default = gconf_setter ('/apps/gnome-terminal/profiles/Default/');
-#&$default (<<EOF
-#  bool      *    default_show_menubar *    false                  *
-#  bool      *    silent_bell          *    true                   *
-#  bool      *    use_system_font      *    false                  *
-#  bool      *    use_theme_colors     *    true                   *
-#  float     *    background_darkness  *    0.85                   *    Range 0 - 1
-#  int       *    scrollback_lines     *    20000                  *
-#  string    *    background_type      *    transparent            *
-#  string    *    cursor_shape         *    underline              *
-#  string    *    font                 *    $font                  *
-#  string    *    scrollbar_position   *    hidden                 *
-#EOF
-#);
+my $default = gconf_setter ('/apps/gnome-terminal/profiles/Default/');
+&$default (<<EOF
+  bool      *    allow_bold           *    false                  *
+  bool      *    default_show_menubar *    false                  *
+  bool      *    silent_bell          *    true                   *
+  bool      *    use_system_font      *    false                  *
+  bool      *    use_theme_colors     *    true                   *
+  float     *    background_darkness  *    0.85                   *    Range 0 - 1
+  int       *    scrollback_lines     *    20000                  *
+  string    *    background_type      *    transparent            *
+  string    *    cursor_shape         *    underline              *
+  string    *    font                 *    $font                  *
+  string    *    scrollbar_position   *    hidden                 *
+EOF
+);
 
 
-my @nightflower_colors  = ('000000', '00ff00', 'ffff55', 'ff00ff', '66aaff', 'ee82ee', '00ffff', 'ffc0cb', 
-                           '000000', '00cd00', 'cd0000', 'cd00cd', '3366ff', '7d26cd', '00cdcd', '770077');
-my $nightflower_palette = join ':', map {s/(..)(..)(..)/#\1\1\2\2\3\3/; $_} @nightflower_colors;
-
-my $nightflower = gconf_setter ('/apps/gnome-terminal/profiles/Profile0/');
+my $nightflower_palette = qx|./parse -d nightflower|;
+my $nightflower = gconf_setter ('/apps/gnome-terminal/profiles/Nightflower/');
 &$nightflower (<<EOF
   bool      *    allow_bold           *    false                  *
   bool      *    default_show_menubar *    false                  *
@@ -712,11 +710,8 @@ EOF
 );
 
 
-my @dayflower_colors = ('000000', '008b00', 'ee0000', '8b008b', '0000cd', '551a8b', '00cdcd', 'ffc0cb', 
-                        '000000', '00ff00', 'ffff55', 'ff00ff', '3366ff', 'ee82ee', '00cdcd', 'ffccff');
-my $dayflower_palette = join ':', map {s/(..)(..)(..)/#\1\1\2\2\3\3/; $_} @dayflower_colors;
-
-my $dayflower = gconf_setter ('/apps/gnome-terminal/profiles/Profile1/');
+my $dayflower_palette = qx|./parse -l dayflower|;
+my $dayflower = gconf_setter ('/apps/gnome-terminal/profiles/Dayflower/');
 &$dayflower (<<EOF
   bool      *    allow_bold           *    false                  *
   bool      *    default_show_menubar *    false                  *
@@ -735,7 +730,29 @@ my $dayflower = gconf_setter ('/apps/gnome-terminal/profiles/Profile1/');
   string    *    visible_name         *    dayflower              *
 EOF
 );
-__Bbol0jE+GUfz4cceW4N/QSHyVZwusabvnUsNZkok2is
+
+
+my $standard_palette = qx|./parse -d standard|;
+my $standard = gconf_setter ('/apps/gnome-terminal/profiles/Standard/');
+&$standard (<<EOF
+  bool      *    allow_bold           *    false                  *
+  bool      *    default_show_menubar *    false                  *
+  bool      *    silent_bell          *    true                   *
+  bool      *    use_system_font      *    false                  *
+  bool      *    use_theme_colors     *    false                  *
+  float     *    background_darkness  *    0.85                   *    Range 0 - 1
+  int       *    scrollback_lines     *    20000                  *
+  string    *    background_color     *    #000000000000          *
+  string    *    background_type      *    transparent            *
+  string    *    cursor_shape         *    underline              *
+  string    *    font                 *    $font                  *
+  string    *    foreground_color     *    #ffffccccffff          *
+  string    *    palette              *    $standard_palette   *
+  string    *    scrollbar_position   *    hidden                 *
+  string    *    visible_name         *    standard            *
+EOF
+);
+__UF3w3N9Ll2RobsHmQMVajxe77grCtKjCDQtS3I2grzA
 
 meta::setting('metacity', <<'__xqvra85qKlMKd51XZ+7TlytnFBLzdvlK4MmQXGD4boc');
 my $metacity_general = gconf_setter ('/apps/metacity/general/');
