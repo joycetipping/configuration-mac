@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Run gconf settings
+/home/joycetipping/projects/configuration/gnome/gconf apply
+
+# Set up symlinks
+ln -s /home/joycetipping/projects/configuration/vim/vim            /home/joycetipping/.vim
+ln -s /home/joycetipping/projects/configuration/vim/vimrc          /home/joycetipping/.vimrc
+ln -s /home/joycetipping/projects/configuration/emacs              /home/joycetipping/.emacs
+
+ln -s /home/joycetipping/projects/configuration/bash/bashrc        /home/joycetipping/.bashrc
+ln -s /home/joycetipping/projects/configuration/bash/bash_aliases  /home/joycetipping/.bash_aliases
+ln -s /home/joycetipping/projects/configuration/bash/profile       /home/joycetipping/.profile
+
+ln -s /home/joycetipping/projects/configuration/xinitrc            /home/joycetipping/.xinitrc
+
+ln -s /home/joycetipping/projects/configuration/texmf-var          /home/joycetipping/.texmf-var

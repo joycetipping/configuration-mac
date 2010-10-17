@@ -629,10 +629,10 @@ $noise =~ s/\//-/g;
 "$0.$noise";
 __zNSrihAkMKJG5spRYgcFdoNArFKig1u12gIp6gJ8pZw
 
-meta::setting('compiz', <<'__t0YL9JkFCVdlO7ds2sLp05hryrB0P63muZGtvX6yB3Y');
+meta::setting('compiz', <<'__NFEX97jc7ftKlhTY0UmeerZ4c424LxclVJmGZnXY5vY');
 my $compiz_general = gconf_setter ('/apps/compiz/general/');
-my $hsize = 3;
-my $vsize = 3;
+my $hsize = 5;
+my $vsize = 5;
 my $active_plugins = add ("wallpaper", "/apps/compiz/general/allscreens/options/active_plugins");
 &$compiz_general (<<EOF
   int          *   screen0/options/hsize                                          *   $hsize             *   Range 1 - 32
@@ -645,7 +645,7 @@ EOF
 );
 
 my $compiz_plugins = gconf_setter ('/apps/compiz/plugins/');
-my $backgrounds = stack ('/home/joycetipping/library/graphics/raster/backgrounds/warty-final-ubuntu-purple.jpg', $hsize * $vsize);
+my $backgrounds = stack ('/home/joycetipping/library/images/backgrounds/warty-final-ubuntu-pink.jpg', $hsize * $vsize);
 &$compiz_plugins (<<EOF
   list:int     *  animation/screen0/options/close_durations  *  [100,50,50]   *  
   list:int     *  animation/screen0/options/open_durations   *  [100,50,50]   *  
@@ -658,7 +658,7 @@ my $backgrounds = stack ('/home/joycetipping/library/graphics/raster/backgrounds
   list:string  *  wallpaper/screen0/options/bg_image         *  $backgrounds  *
 EOF
 );
-__t0YL9JkFCVdlO7ds2sLp05hryrB0P63muZGtvX6yB3Y
+__NFEX97jc7ftKlhTY0UmeerZ4c424LxclVJmGZnXY5vY
 
 meta::setting('gnome-terminal', <<'__UF3w3N9Ll2RobsHmQMVajxe77grCtKjCDQtS3I2grzA');
 my $gnome_terminal = gconf_setter ('/apps/gnome-terminal/global/');

@@ -1,7 +1,0 @@
-#!/bin/bash
-
-# Run this script under sudo.
-
-a2enmod modrewrite
-cp default /etc/apache2/sites-available/default
-/etc/init.d/apache2 restart

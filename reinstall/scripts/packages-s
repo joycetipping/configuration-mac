@@ -1,0 +1,59 @@
+#!/bin/bash
+# Sudo this script
+
+# A script for installing my packages; intended to run overnight.
+
+# Install this first because the setup will prompt for a root password, which will block the rest of the process.
+aptitude install mysql-server
+
+# Install the rest of the packages, upgrading before and after.
+aptitude update
+aptitude safe-upgrade
+
+aptitude install  \
+  apache2  \
+  apt-rdepends  \
+  auctex  \
+  bash-doc  \
+  build-essential  \
+  clisp  \
+  emacs  \
+  exiv2  \
+  exuberant-ctags  \
+  ffmpeg  \
+  gimp  \
+  gstreamer-tools  \
+  id3tool  \
+  iftop  \
+  ikarus \
+  inkscape  \
+  iotop  \
+  libapache2-mod-php5  \
+  libconfig-any-perl  \
+  libdate-calc-perl  \
+  libterm-readline-gnu-perl  \
+  luajit  \
+  maxima  \
+  mplayer-nogui  \
+  octave3.2  \
+  openjdk-6-jdk  \
+  perl-doc  \
+  perlconsole  \
+  php5  \
+  php5-mysql  \
+  php5-sqlite  \
+  r-recommended  \
+  rlwrap  \
+  texlive-full  \
+  ttf-inconsolata  \
+  ttf-mscorefonts-installer  \
+  vorbis-tools  \
+  wordpress  \
+  xsel  \
+  youtube-dl
+
+aptitude update
+aptitude safe-upgrade
+
+# Set up symlink in /var/www/ to my local public_html
+ln -s /home/joycetipping/public_html/ /var/www/jt

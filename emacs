@@ -36,3 +36,7 @@
 (setq make-backup-files t)                                                ; enable backup files
 (setq version-control t)                                                  ; enable versioning with default values
 (setq backup-directory-alist (quote ((".*" . "~/.emacs_backups/"))))      ; put backup files in this directory
+
+
+;; Deletion and Killing
+(delete-selection-mode t)

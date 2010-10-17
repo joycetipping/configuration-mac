@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cd scripts/
+
+sudo ./essential-packages-s
+./settings
+
+sudo ./packages-s
+./wp-restore
+sudo ./configure-apache-s
