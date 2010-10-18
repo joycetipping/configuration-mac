@@ -15,3 +15,5 @@ ln -s /home/joycetipping/projects/configuration/bash/profile       /home/joyceti
 ln -s /home/joycetipping/projects/configuration/xinitrc            /home/joycetipping/.xinitrc
 
 ln -s /home/joycetipping/projects/configuration/texmf-var          /home/joycetipping/.texmf-var
+
+ln -s /home/joycetipping/projects/configuration/ssh                /home/joycetipping/.ssh
