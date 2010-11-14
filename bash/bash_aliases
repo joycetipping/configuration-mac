@@ -1,11 +1,12 @@
 # vim: syntax=sh :
 
 export EDITOR=/usr/bin/vim
-export PATH="$PATH:~/bin:."
+#export PATH="$PATH:~/bin:."
 
 alias cpl='cp -d'
 alias remove='/bin/rm'
 alias rm='echo Use remove'
+alias sus='sudo pm-suspend'
 
 alias u='cd ../'
 alias u2='cd ../../'
@@ -15,11 +16,5 @@ alias u5='cd ../../../../../'
 alias u6='cd ../../../../../../'
 alias u7='cd ../../../../../../../'
 
-alias guile='rlwrap guile'
-alias jdb='rlwrap jdb'
 alias luajit='luajit-2.0.0-beta2'
 alias nodedoc='man /home/joycetipping/projects/github/node/doc/node.1'
-alias flafdoc='evince /home/joycetipping/projects/socialmedia/platform/flaf-1.0/framework/docs/developer/dev-guide.pdf';
-
-# For ruby version manager (rvm)
-[[ -s "/home/joycetipping/.rvm/scripts/rvm" ]] && . "/home/joycetipping/.rvm/scripts/rvm"

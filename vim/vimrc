@@ -1,5 +1,4 @@
-" Basic " {{{
-
+"Basic
 set autoindent
 set expandtab
 set foldmethod=marker
@@ -14,33 +13,27 @@ set number
 set shiftwidth=2
 set showcmd
 set tabstop=2
+set title
 
-"}}}
 
-" Key Mappings " {{{
-
+"Key Mappings
 nnoremap s o<ESC>
 nnoremap S O<ESC>
 
-"}}}
 
-" Folds " {{{
-
+"Folds
 "au BufWinLeave        *          mkview
 "au BufWinEnter        *          silent loadview
 "au BufWrite           *          mkview
 "au BufRead            *          silent loadview
 "au BufRead,BufNewFile *.txt      set foldmethod=indent
 
-"}}}
 
-" Special Filetypes " {{{
-
+"Special Filetypes
 au BufRead,BufNewFile *.cltex    set filetype=cltex
 au BufRead,BufNewFile *.gnarly   set filetype=gnarly
+au BufRead,BufNewFile *.hx       set filetype=haxe
 au BufRead,BufNewFile *.ljs      set filetype=ljs
 au BufRead,BufNewFile *.lp       set filetype=lispwithparagraphs
 au BufRead,BufNewFile *.ocamltex set filetype=ocamltex
 au BufRead,BufNewFile *.scala    set filetype=scala
-
-"}}}
