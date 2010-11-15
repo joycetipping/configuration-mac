@@ -15,8 +15,6 @@ Defaults	env_reset
 
 # User privilege specification
 root	ALL=(ALL) ALL
-joycetipping ALL=(ALL) NOPASSWD: /usr/sbin/pm-hibernate
-joycetipping ALL=(ALL) NOPASSWD: /usr/sbin/pm-suspend
 
 # Allow members of group sudo to execute any command
 # (Note that later entries override this, so you might need to move
@@ -27,3 +25,7 @@ joycetipping ALL=(ALL) NOPASSWD: /usr/sbin/pm-suspend
 
 # Members of the admin group may gain root privileges
 %admin ALL=(ALL) ALL
+
+# No password specifications
+joycetipping ALL=(ALL) NOPASSWD: /usr/sbin/pm-hibernate
+joycetipping ALL=(ALL) NOPASSWD: /usr/sbin/pm-suspend
