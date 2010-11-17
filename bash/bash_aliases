@@ -18,3 +18,12 @@ alias u7='cd ../../../../../../../'
 
 alias luajit='luajit-2.0.0-beta2'
 alias nodedoc='man /home/joycetipping/projects/github/node/doc/node.1'
+alias vt='vim -t'
+
+# Some aliases for work
+alias clients='ssh joyce@clients.socialmedia.com'
+alias flafdoc='evince /home/joycetipping/projects/socialmedia/platform/flaf-1.0/framework/docs/developer/dev-guide.pdf'
+
+alias sm='cd /home/joycetipping/projects/socialmedia/'
+alias smbuild='cd /home/joycetipping/projects/socialmedia/platform/ad-display/'
+alias addisplay='cd /home/joycetipping/projects/socialmedia/platform/ad-display/src/main/haxe/socialmedia/display'
