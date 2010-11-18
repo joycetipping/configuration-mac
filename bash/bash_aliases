@@ -6,6 +6,7 @@ export EDITOR=/usr/bin/vim
 alias cpl='cp -d'
 alias remove='/bin/rm'
 alias rm='echo Use remove'
+alias sudojt='sudo -u joycetipping'
 alias sus='sudo pm-suspend'
 
 alias u='cd ../'
@@ -15,12 +16,13 @@ alias u4='cd ../../../../'
 alias u5='cd ../../../../../'
 alias u6='cd ../../../../../../'
 alias u7='cd ../../../../../../../'
+alias u8='cd ../../../../../../../../'
 
 alias luajit='luajit-2.0.0-beta2'
 alias nodedoc='man /home/joycetipping/projects/github/node/doc/node.1'
 alias vt='vim -t'
 
-# Some aliases for work
+# Socialmedia
 alias clients='ssh joyce@clients.socialmedia.com'
 alias flafdoc='evince /home/joycetipping/projects/socialmedia/platform/flaf-1.0/framework/docs/developer/dev-guide.pdf'
 

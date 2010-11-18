@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # Run gconf settings
-/home/joycetipping/projects/configuration/gnome/gconf apply
+cd /home/joycetipping/projects/configuration/gnome/
+./gconf apply
+cd
 
 # Set up symlinks
 ln -s /home/joycetipping/projects/configuration/vim/vim            /home/joycetipping/.vim
