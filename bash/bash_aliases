@@ -1,7 +1,7 @@
 # vim: syntax=sh :
 
 export EDITOR=/usr/bin/vim
-#export PATH="$PATH:~/bin:."
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
 alias cpl='cp -d'
 alias remove='/bin/rm'
@@ -26,6 +26,11 @@ alias vt='vim -t'
 alias clients='ssh joyce@clients.socialmedia.com'
 alias flafdoc='evince /home/joycetipping/projects/socialmedia/platform/flaf-1.0/framework/docs/developer/dev-guide.pdf'
 
+alias ads='cd /home/joycetipping/projects/socialmedia/ads/'
+alias display='cd /home/joycetipping/projects/socialmedia/platform/ad-display/src/main/haxe/socialmedia/display'
+alias platform='cd /home/joycetipping/projects/socialmedia/platform/'
 alias sm='cd /home/joycetipping/projects/socialmedia/'
-alias smbuild='cd /home/joycetipping/projects/socialmedia/platform/ad-display/'
-alias addisplay='cd /home/joycetipping/projects/socialmedia/platform/ad-display/src/main/haxe/socialmedia/display'
+alias hours='vim /home/joycetipping/projects/socialmedia/hours/nov.txt'
+
+# Bash prompt:
+. /home/joycetipping/projects/configuration/bash/prompt

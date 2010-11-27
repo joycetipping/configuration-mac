@@ -25,6 +25,8 @@ nnoremap S O<ESC>
 "au BufWrite           *          mkview
 "au BufRead            *          silent loadview
 "au BufRead,BufNewFile *.txt      set foldmethod=indent
+hi Folded     ctermbg=15
+hi FoldColumn ctermbg=15
 
 "Special Filetypes
 au BufRead,BufNewFile *.cltex    set filetype=cltex

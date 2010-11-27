@@ -1,0 +1,10 @@
+#!/bin/bash
+# WTFPL license ... cheers!
+
+# The original
+#export PS1='\[\033[1;37m\]\h\[\033[1;35m\]\W\[\033[0;0m\] '
+
+# The alternative
+#export PS1='\[\033[1;35m\][\h]\W\[\033[0;0m\] '
+
+export PS1='\h\[\033[1;35m\]\W\[\033[0;0m\] '
