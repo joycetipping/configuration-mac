@@ -1,8 +1,9 @@
 # vim: syntax=sh :
 
+# Exports
 export EDITOR=/usr/bin/vim
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
+# Aliases
 alias cpl='cp -d'
 alias remove='/bin/rm'
 alias rm='echo Use remove'
@@ -21,6 +22,17 @@ alias u8='cd ../../../../../../../../'
 alias luajit='luajit-2.0.0-beta2'
 alias nodedoc='man /home/joycetipping/projects/github/node/doc/node.1'
 alias vt='vim -t'
+alias musings='vim /home/joycetipping/projects/musings/2010.txt'
+
+# Bash prompt:
+. /home/joycetipping/projects/configuration/bash/prompt
+
+# RVM
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+
+
+
+
 
 # Socialmedia
 alias clients='ssh joyce@clients.socialmedia.com'
@@ -31,6 +43,3 @@ alias display='cd /home/joycetipping/projects/socialmedia/platform/ad-display/sr
 alias platform='cd /home/joycetipping/projects/socialmedia/platform/'
 alias sm='cd /home/joycetipping/projects/socialmedia/'
 alias hours='vim /home/joycetipping/projects/socialmedia/hours/nov.txt'
-
-# Bash prompt:
-. /home/joycetipping/projects/configuration/bash/prompt
