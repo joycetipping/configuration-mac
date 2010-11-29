@@ -23,6 +23,7 @@ alias luajit='luajit-2.0.0-beta2'
 alias nodedoc='man /home/joycetipping/projects/github/node/doc/node.1'
 alias vt='vim -t'
 alias musings='vim /home/joycetipping/projects/musings/2010.txt'
+alias aliases='vim /home/joycetipping/projects/configuration/bash/bash_aliases'
 
 # Bash prompt:
 . /home/joycetipping/projects/configuration/bash/prompt
@@ -40,6 +41,7 @@ alias flafdoc='evince /home/joycetipping/projects/socialmedia/platform/flaf-1.0/
 
 alias ads='cd /home/joycetipping/projects/socialmedia/ads/'
 alias display='cd /home/joycetipping/projects/socialmedia/platform/ad-display/src/main/haxe/socialmedia/display'
+alias hours='vim /home/joycetipping/projects/socialmedia/hours/nov.txt'
 alias platform='cd /home/joycetipping/projects/socialmedia/platform/'
 alias sm='cd /home/joycetipping/projects/socialmedia/'
-alias hours='vim /home/joycetipping/projects/socialmedia/hours/nov.txt'
+alias stax='cd /home/joycetipping/projects/socialmedia/platform/stax'

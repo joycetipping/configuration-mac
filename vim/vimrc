@@ -30,8 +30,14 @@ map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>  "C-\  Open definiti
 "au BufWrite           *          mkview
 "au BufRead            *          silent loadview
 "au BufRead,BufNewFile *.txt      set foldmethod=indent
-hi Folded     ctermbg=15
-hi FoldColumn ctermbg=15
+
+"Highlighting
+hi Folded      ctermbg=15
+hi FoldColumn  ctermbg=15
+hi IncSearch   ctermfg=1
+hi Search      ctermbg=2
+hi ErrorMsg    ctermbg=0  ctermfg=1
+hi MatchParen  ctermfg=0
 
 "Special Filetypes
 au BufRead,BufNewFile *.cltex    set filetype=cltex
