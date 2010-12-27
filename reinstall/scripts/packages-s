@@ -16,4 +16,4 @@ aptitude update
 aptitude safe-upgrade
 
 # Set up symlink in /var/www/ to my local public_html
-ln -s /home/joycetipping/public_html/ /var/www/jt
+ln -s $HOME/public_html/ /var/www/jt

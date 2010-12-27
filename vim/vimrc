@@ -24,18 +24,11 @@ nnoremap S O<ESC>
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>  "C-\  Open definition in new tab
 "map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>       "A-]  Open definition in vertical split
 
-"Folds
-"au BufWinLeave        *          mkview
-"au BufWinEnter        *          silent loadview
-"au BufWrite           *          mkview
-"au BufRead            *          silent loadview
-"au BufRead,BufNewFile *.txt      set foldmethod=indent
-
 "Highlighting
 hi Folded      ctermbg=15
 hi FoldColumn  ctermbg=15
-hi IncSearch   ctermfg=1
-hi Search      ctermbg=2
+hi IncSearch   ctermfg=2
+hi Search      ctermbg=1
 hi ErrorMsg    ctermbg=0  ctermfg=1
 hi MatchParen  ctermfg=0
 
@@ -47,5 +40,3 @@ au BufRead,BufNewFile *.ljs      set filetype=ljs
 au BufRead,BufNewFile *.lp       set filetype=lispwithparagraphs
 au BufRead,BufNewFile *.ocamltex set filetype=ocamltex
 au BufRead,BufNewFile *.scala    set filetype=scala
-
-"Ctags

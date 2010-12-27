@@ -629,7 +629,7 @@ $noise =~ s/\//-/g;
 "$0.$noise";
 __zNSrihAkMKJG5spRYgcFdoNArFKig1u12gIp6gJ8pZw
 
-meta::setting('compiz', <<'__NFEX97jc7ftKlhTY0UmeerZ4c424LxclVJmGZnXY5vY');
+meta::setting('compiz', <<'__+QOCBAyOLfnjaS9XIWxNdvdiTuOEnIO3JDpjH6zwMW8');
 my $compiz_general = gconf_setter ('/apps/compiz/general/');
 my $hsize = 5;
 my $vsize = 5;
@@ -653,12 +653,11 @@ my $backgrounds = stack ('/home/joycetipping/library/images/backgrounds/warty-fi
   float        *  scale/screen0/options/speed                *  4             *  
   float        *  scale/screen0/options/timestep             *  0.5           *  
   bool         *  wall/allscreens/options/show_switcher      *  false         *  
-  bool         *  wall/screen0/options/edgeflip_pointer      *  true          *  
   float        *  wall/allscreens/options/slide_duration     *  0             *   Range 0 - 5
   list:string  *  wallpaper/screen0/options/bg_image         *  $backgrounds  *
 EOF
 );
-__NFEX97jc7ftKlhTY0UmeerZ4c424LxclVJmGZnXY5vY
+__+QOCBAyOLfnjaS9XIWxNdvdiTuOEnIO3JDpjH6zwMW8
 
 meta::setting('gnome-terminal', <<'__UF3w3N9Ll2RobsHmQMVajxe77grCtKjCDQtS3I2grzA');
 my $gnome_terminal = gconf_setter ('/apps/gnome-terminal/global/');

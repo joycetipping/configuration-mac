@@ -1,20 +1,21 @@
 #!/bin/bash
 
 # Run gconf settings
-cd /home/joycetipping/projects/configuration/gnome/
+cd $HOME/projects/configuration/gnome/
 ./gconf apply
 cd
 
 # Set up symlinks
-ln -s /home/joycetipping/projects/configuration/vim/vim            /home/joycetipping/.vim
-ln -s /home/joycetipping/projects/configuration/vim/vimrc          /home/joycetipping/.vimrc
-ln -s /home/joycetipping/projects/configuration/emacs              /home/joycetipping/.emacs
+ln -s $HOME/projects/configuration/vim/vim              $HOME/.vim
+ln -s $HOME/projects/configuration/vim/vimrc            $HOME/.vimrc
+ln -s $HOME/projects/configuration/emacs                $HOME/.emacs
 
-ln -s /home/joycetipping/projects/configuration/bash/bashrc        /home/joycetipping/.bashrc
-ln -s /home/joycetipping/projects/configuration/bash/bash_aliases  /home/joycetipping/.bash_aliases
-ln -s /home/joycetipping/projects/configuration/bash/profile       /home/joycetipping/.profile
+ln -s $HOME/projects/configuration/bash/bashrc          $HOME/.bashrc
+ln -s $HOME/projects/configuration/bash/bash_aliases    $HOME/.bash_aliases
+ln -s $HOME/projects/configuration/bash/profile         $HOME/.profile
 
-ln -s /home/joycetipping/projects/configuration/xinitrc            /home/joycetipping/.xinitrc
-ln -s /home/joycetipping/projects/configuration/texmf-var          /home/joycetipping/.texmf-var
-ln -s /home/joycetipping/projects/configuration/ssh                /home/joycetipping/.ssh
-ln -s /home/joycetipping/projects/configuration/ctags              /home/joycetipping/.ctags
+ln -s $HOME/projects/configuration/xinitrc              $HOME/.xinitrc
+ln -s $HOME/projects/configuration/texmf-var            $HOME/.texmf-var
+ln -s $HOME/projects/configuration/ssh                  $HOME/.ssh
+ln -s $HOME/projects/configuration/ctags                $HOME/.ctags
+ln -s $HOME/projects/configuration/nodejs/node_modules  $HOME/.node_modules

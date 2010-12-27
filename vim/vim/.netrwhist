@@ -1,6 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/joycetipping/projects/socialmedia/ads/helpers'
-let g:netrw_dirhist_2='/home/joycetipping/projects/socialmedia/ads/notes'
-let g:netrw_dirhist_3='/home/joycetipping/projects/musings'
-let g:netrw_dirhist_4='/home/joycetipping/library/music/playlists'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/joycetipping/projects/socialmedia/ads/kinect/overlay'
+let g:netrw_dirhist_2='/home/joycetipping/projects/socialmedia/ads/kinect/hub'
+let g:netrw_dirhist_3='/home/joycetipping/projects/capstone/pieces/properties'
+let g:netrw_dirhist_4='/home/joycetipping/projects/capstone/pieces'
+let g:netrw_dirhist_5='/home/joycetipping/projects/career/resume/tex'
