@@ -3,8 +3,8 @@
 
 # A script for installing my packages; intended to run overnight.
 
-# Install this first because the setup will prompt for a root password, which will block the rest of the process.
-aptitude install mysql-server
+# Install these first they require interaction (prompt for password, accept license), which will block the rest of the process
+aptitude install mysql-server ttf-mscorefonts-installer
 
 # Install the rest of the packages, upgrading before and after.
 aptitude update

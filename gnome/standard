@@ -2,32 +2,32 @@ Standard
 
 1 (black)
    dark: 000
-  light: 444
+  light: 000
 
 2 (red)
-   dark: c00
-  light: f00
+   dark: f0f
+  light: f0f
 
 3 (green)
-   dark: 080
+   dark: 0f0
   light: 0f0
 
 4 (yellow)
-   dark: ca0
-  light: ff4
+   dark: ff5
+  light: ff5
 
 5 (blue)
-   dark: 33a
-  light: 8af
+   dark: 6af
+  light: 6af
 
 6 (magenta)
-   dark: 909
-  light: e4e
+   dark: e8e
+  light: e8e
 
 7 (cyan)
-   dark: 2bb
-  light: 3ee
+   dark: 0ff
+  light: 0ff
 
 8 (gray)
-   dark: 888
+   dark: ddd
   light: ddd

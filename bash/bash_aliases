@@ -1,5 +1,10 @@
 # vim: syntax=sh :
 
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
 # Exports
 export EDITOR=/usr/bin/vim
 
@@ -29,10 +34,16 @@ alias vt='vim -t'
 # Bash prompt:
 . $HOME/projects/configuration/bash/prompt
 
+# R
+export R_LIBS="$HOME/.R:$R_LIBS"
+
+# Ruby
+alias irbs='irb --simple-prompt'
 # RVM
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 # Haxe
-HAXE_LIBRARY_PATH="$HOME/library/programs/haxe/haxe/std:."
+export HAXE_LIBRARY_PATH="$HOME/library/programs/haxe/haxe/std:."
+export PATH="$PATH:$HOME/library/programs/haxe/bin"
 
 
 
@@ -43,7 +54,7 @@ alias flafdoc='evince $HOME/projects/socialmedia/platform/flaf-1.0/framework/doc
 alias adclient='cd $HOME/projects/socialmedia/adops/adclient/'
 alias adops='cd $HOME/projects/socialmedia/adops/'
 alias ads='cd $HOME/projects/socialmedia/adops/ads/'
-alias hours='vim $HOME/projects/socialmedia/hours/dec.txt'
+alias hours='vim $HOME/projects/socialmedia/hours/2011/jan.txt'
 alias platform='cd $HOME/projects/socialmedia/platform/'
 alias sm='cd $HOME/projects/socialmedia/'
 alias stax='cd $HOME/projects/socialmedia/platform/stax/'

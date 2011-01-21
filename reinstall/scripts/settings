@@ -19,3 +19,4 @@ ln -s $HOME/projects/configuration/texmf-var            $HOME/.texmf-var
 ln -s $HOME/projects/configuration/ssh                  $HOME/.ssh
 ln -s $HOME/projects/configuration/ctags                $HOME/.ctags
 ln -s $HOME/projects/configuration/nodejs/node_modules  $HOME/.node_modules
+ln -s $HOME/projects/configuration/R                    $HOME/.R
