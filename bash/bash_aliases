@@ -1,6 +1,7 @@
 # vim: syntax=sh :
 
-homedir="$HOME/joyce"
+homedir="$HOME/home"
+conf="$homedir/configuration"
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$homedir/bin" ] ; then
@@ -31,13 +32,12 @@ alias u6='cd ../../../../../../'
 alias u7='cd ../../../../../../../'
 alias u8='cd ../../../../../../../../'
 
-alias aliases='vim $homedir/projects/configuration/bash/bash_aliases'
-alias nodedoc='man $homedir/projects/github/nodejs/doc/node.1'
+alias aliases="vim $conf/bash/bash_aliases"
 alias notes='cd $homedir/library/notes/'
 alias vt='vim -t'
 
 # Bash prompt:
-. $homedir/projects/configuration/bash/prompt
+. $conf/bash/prompt
 
 # R
 export R_LIBS="$HOME/.R:$R_LIBS"

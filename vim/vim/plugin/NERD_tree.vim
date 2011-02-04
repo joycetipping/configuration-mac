@@ -1,1 +1,0 @@
-/home/joycetipping/projects/github/nerdtree/plugin/NERD_tree.vim
