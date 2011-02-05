@@ -7,3 +7,4 @@ ln -sf $conf/vim/vim           $HOME/.vim
 
 ln -sf $conf/bash/bashrc       $HOME/.bashrc
 ln -sf $conf/bash/bash_aliases $HOME/.bash_aliases
+ln -sf $conf/bash/bash_profile $HOME/.bash_profile
