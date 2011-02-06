@@ -105,14 +105,14 @@ PASTEL='{
         "Red Component" = 1;
     };
     "Disable Bold" = 0;
-    Font = "Monaco 14";
+    Font = "Monaco 11";
     "Foreground Color" =         {
         "Blue Component" = 1;
         "Green Component" = 1;
         "Red Component" = 1;
     };
     "Horizontal Character Spacing" = 1;
-    NAFont = "Monaco 14";
+    NAFont = "Monaco 11";
     Rows = 24;
     "Selected Text Color" =         {
         "Blue Component" = 0.9476005;
@@ -129,10 +129,10 @@ PASTEL='{
 }'
 
 # Add display profile
-defaults write net.sourceforge.iTerm Displays -dict-add Pastel "$PASTEL"
-echo "Pastel display profile added"
+defaults write net.sourceforge.iTerm Displays -dict-add pastel "$PASTEL"
+echo "pastel display profile added"
 
 # Set the default display profile
-BOOKMARKS=`defaults read net.sourceforge.iTerm Bookmarks | sed 's/\("Display Profile" = \)"[^"]*";/\1"Pastel";/'`
-defaults write net.sourceforge.iTerm Bookmarks "$BOOKMARKS"
-echo "Pastel display profile installed as default"
+#BOOKMARKS=`defaults read net.sourceforge.iTerm Bookmarks | sed 's/\("Display Profile" = \)"[^"]*";/\1"Pastel";/'`
+#defaults write net.sourceforge.iTerm Bookmarks "$BOOKMARKS"
+#echo "Pastel display profile installed as default"
