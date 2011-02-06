@@ -1,28 +1,30 @@
 # vim: syntax=sh :
 
+# Helpful variables
 homedir="$HOME/home"
 conf="$homedir/configuration"
+
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$homedir/bin" ] ; then
     PATH="$homedir/bin:$PATH"
 fi
 
+
+# Bash prompt:
+. $conf/bash/prompt
+
+
 # Exports
 export EDITOR=/usr/bin/vim
 export TERM=xterm-color
 
-# Mac stuff
-export CLICOLOR=true
-PATH="$PATH:/usr/local/bin"
-PATH="$PATH:/usr/local/git/bin"
-PATH="$PATH:/usr/X11/bin"
 
 # Aliases
 alias cpl='cp -d'
 alias remove='/bin/rm'
 alias rm='echo Use remove'
-alias sudojt='sudo -u joycetipping'
+alias sudojt='sudo -u jdt'
 
 alias u='cd ../'
 alias u2='cd ../../'
@@ -34,16 +36,21 @@ alias u7='cd ../../../../../../../'
 alias u8='cd ../../../../../../../../'
 
 alias aliases="vim $conf/bash/bash_aliases"
-alias notes='cd $homedir/library/notes/'
+alias notes="cd $homedir/library/notes/"
 alias vt='vim -t'
 
-# Bash prompt:
-. $conf/bash/prompt
 
 # R
 export R_LIBS="$HOME/.R:$R_LIBS"
-
 # Ruby
 alias irbs='irb --simple-prompt'
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+
+
+# Mac stuff
+export CLICOLOR=true  # colored terminal output
+PATH="$PATH:/usr/local/bin"
+PATH="$PATH:/usr/local/git/bin"
+PATH="$PATH:/usr/X11/bin"
+alias battery='ioreg -w0 -l | grep Capacity | cut -d " " -f 17-50'
