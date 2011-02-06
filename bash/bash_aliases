@@ -4,21 +4,17 @@
 homedir="$HOME/home"
 conf="$homedir/configuration"
 
-
 # set PATH so it includes user's private bin if it exists
 if [ -d "$homedir/bin" ] ; then
     PATH="$homedir/bin:$PATH"
 fi
 
-
 # Bash prompt:
 . $conf/bash/prompt
-
 
 # Exports
 export EDITOR=/usr/bin/vim
 export TERM=xterm-color
-
 
 # Aliases
 alias cpl='cp -d'
@@ -38,7 +34,6 @@ alias u8='cd ../../../../../../../../'
 alias aliases="vim $conf/bash/bash_aliases"
 alias notes="cd $homedir/library/notes/"
 alias vt='vim -t'
-
 
 # R
 export R_LIBS="$HOME/.R:$R_LIBS"
