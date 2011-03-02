@@ -14,9 +14,11 @@ fi
 
 # Exports
 export EDITOR=/usr/bin/vim
+export LC_CTYPE=en_US.utf-8
 export TERM=xterm-color
 
 # Aliases
+alias bc='echo Starting bc -l;echo;bc -l'
 alias cpl='cp -d'
 alias nerd='vim ./'
 alias remove='/bin/rm'
@@ -41,6 +43,7 @@ export R_LIBS="$HOME/.R:$R_LIBS"
 alias irbs='irb --simple-prompt'
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+cd .  # To source the rvmrc
 
 
 # Mac stuff
