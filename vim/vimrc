@@ -6,6 +6,7 @@ set autoindent
 set expandtab
 set foldcolumn=2
 set foldmethod=marker
+set hidden
 set hlsearch
 set ignorecase
 set incsearch
@@ -18,24 +19,29 @@ set nojoinspaces
 set nowrap
 set number
 set ruler
+set runtimepath+=~/.vim/plugins/*
 set shiftwidth=2
 set showcmd
 set tabstop=2
 set tags=./tags;/
 set title
 
+let mapleader = " "
+
 nnoremap s o<ESC>
 nnoremap S O<ESC>
+nnoremap ' `
+nnoremap ` '
 nnoremap <S-h> gT
 nnoremap <S-l> gt
 nnoremap <C-h> :call TabSlideLeft()<CR>
 nnoremap <C-l> :call TabSlideRight()<CR>
-nnoremap <F3> :call ToggleTerminalCopyPaste()<CR>
+nnoremap <F12> :call ToggleTerminalCopyPaste()<CR>
+
+com Helptags call GetHelpTags()
 
 filetype plugin on
 au BufRead,BufNewFile *.gnarly   set filetype=gnarly
-au BufRead,BufNewFile *.hx       set filetype=haxe
-au BufRead,BufNewFile *.ljs      set filetype=ljs
 au BufRead,BufNewFile *.markdown set filetype=markdown
 au BufRead,BufNewFile *.scala    set filetype=scala
 
@@ -58,12 +64,6 @@ function! ToggleTerminalCopyPaste()
 endfunction
 
 function! TabSlideLeft()
-  let current = tabpagenr()
-  let expr = "tabm " . (current - 2)
-  exec expr
-endfunction
-
-function! TabSlideLeft()
   " Get current tab number (one-based)
   let current = tabpagenr()
 
@@ -82,17 +82,26 @@ function! TabSlideRight()
   exec "tabm " . current
 endfunction
 
+function! GetHelpTags()
+  let doc_dirs = filter(split(system('find ~/.vim/ | grep -e doc$'), '\n'), 'isdirectory(v:val)')
+  for dir in doc_dirs
+    exec "helptags" . dir
+  endfor
+endfunction
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"Special programs
+"Plugins
 
 "Ctags
-map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>  "C-\  Open definition in new tab
-map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>       "A-]  Open definition in vertical split   !! Alt key is captured by gnome-term
+"map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>  "Open in new tab
+map <C-\> :vsp<CR>:exec("tag ".expand("<cword>"))<CR>        "Open in vertical split
 
 "Nerdtree
 map <F2> :NERDTreeToggle<CR>
 
+"Tlist
+map <F3> :TlistToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
