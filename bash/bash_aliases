@@ -49,6 +49,7 @@ cd .  # To source the rvmrc
 # Mac stuff
 export CLICOLOR=true  # colored terminal output
 alias battery='ioreg -w0 -l | grep Capacity | cut -d " " -f 17-50'
+source "$homedir/bin/git-completion.bash"
 
 # Brew
 PATH="$PATH:/usr/X11/bin"
