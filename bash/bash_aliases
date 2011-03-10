@@ -18,6 +18,7 @@ export LC_CTYPE=en_US.utf-8
 export TERM=xterm-color
 
 # Aliases
+alias aliases="vim $conf/bash/bash_aliases"
 alias bc='echo Starting bc -l;echo;bc -l'
 alias cpl='cp -d'
 alias nerd='vim ./'
@@ -40,17 +41,6 @@ alias u6='cd ../../../../../../'
 alias u7='cd ../../../../../../../'
 alias u8='cd ../../../../../../../../'
 
-alias aliases="vim $conf/bash/bash_aliases"
-
-# R
-export R_LIBS="$HOME/.R:$R_LIBS"
-# Ruby
-alias irbs='irb --simple-prompt'
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-cd .  # To source the rvmrc
-
-
 # Mac stuff
 export CLICOLOR=true  # colored terminal output
 alias battery='ioreg -w0 -l | grep Capacity | cut -d " " -f 17-50'
@@ -60,5 +50,15 @@ source "$homedir/bin/git-completion.bash"
 PATH="$PATH:/usr/X11/bin"
 PATH="/usr/local/bin:$PATH"  # usr/local/bin needs to be before /usr/bin
 
+# R
+export R_LIBS="$HOME/.R:$R_LIBS"
+
 # RJB
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home
+
+# Ruby
+alias irbs='irb --simple-prompt'
+
+# RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+cd .  # To source the rvmrc
