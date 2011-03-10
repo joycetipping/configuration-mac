@@ -26,6 +26,11 @@ alias rm='echo Use remove'
 alias sudojt='sudo -u jdt'
 alias vt='vim -t'
 
+alias rose='ssh joycetipping@rose.local'
+alias testdb='ssh fingertip.boulder.foraker.com'
+alias prodb='ssh db.fingertipformulary.com'
+alias sultana='ssh sultana.boulder.foraker.com'
+
 alias u='cd ../'
 alias u2='cd ../../'
 alias u3='cd ../../../'
