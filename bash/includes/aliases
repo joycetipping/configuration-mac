@@ -1,0 +1,18 @@
+# vim: syntax=sh :
+
+alias aliases="vim $conf/bash/bash_aliases"
+alias bc="echo Starting bc -l;echo;bc -l"
+alias cpl="cp -d"
+alias remove="/bin/rm"
+alias rm="echo Use remove"
+alias sudojt="sudo -u jdt"
+alias vt="vim -t"
+
+alias  u="cd ../"
+alias u2="cd ../../"
+alias u3="cd ../../../"
+alias u4="cd ../../../../"
+alias u5="cd ../../../../../"
+alias u6="cd ../../../../../../"
+alias u7="cd ../../../../../../../"
+alias u8="cd ../../../../../../../../"

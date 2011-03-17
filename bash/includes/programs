@@ -1,0 +1,11 @@
+# vim: syntax=sh :
+
+# R
+export R_LIBS="$HOME/.R:$R_LIBS"
+
+# RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+cd .  # To source the rvmrc
+
+# SSH
+ssh-add > /dev/null 2>&1

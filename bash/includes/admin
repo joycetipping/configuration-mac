@@ -1,0 +1,12 @@
+# vim: syntax=sh :
+
+# Include user's private bin
+if [[ -d "$homedir/bin" ]]; then PATH="$PATH:$homedir/bin"; fi
+
+# Bash prompt
+source "$conf/bash/prompt"
+
+# Terminal configurations
+export EDITOR=/usr/bin/vim
+export LC_CTYPE=en_US.utf-8
+export TERM=xterm-color

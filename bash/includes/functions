@@ -1,0 +1,6 @@
+# vim: syntax=sh :
+
+# Wikipedia
+wk() {
+  w3m http://en.wikipedia.org/wiki/$(echo $* | tr ' ' '_')
+}

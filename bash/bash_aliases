@@ -1,66 +1,10 @@
 # vim: syntax=sh :
-
-# Helpful variables
 homedir="$HOME/home"
 conf="$homedir/configuration"
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$homedir/bin" ] ; then
-    PATH="$PATH:$homedir/bin"
-fi
-
-# Bash prompt:
-. $conf/bash/prompt
-
-# Exports
-export EDITOR=/usr/bin/vim
-export LC_CTYPE=en_US.utf-8
-export TERM=xterm-color
-
-# Aliases
-alias aliases="vim $conf/bash/bash_aliases"
-alias bc='echo Starting bc -l;echo;bc -l'
-alias cpl='cp -d'
-alias nerd='vim ./'
-alias remove='/bin/rm'
-alias rm='echo Use remove'
-alias sudojt='sudo -u jdt'
-alias vt='vim -t'
-
-alias clients='ssh -t sultana.boulder.foraker.com "cd /network_files/clients/;bash"'
-alias designbox='ssh -t designbox@design-workstation.local "cd Desktop/joyce/;bash"'
-alias prodb='ssh db.fingertipformulary.com'
-alias rose='ssh joycetipping@rose.local'
-alias sultana='ssh sultana.boulder.foraker.com'
-alias testdb='ssh fingertip.boulder.foraker.com'
-
-alias u='cd ../'
-alias u2='cd ../../'
-alias u3='cd ../../../'
-alias u4='cd ../../../../'
-alias u5='cd ../../../../../'
-alias u6='cd ../../../../../../'
-alias u7='cd ../../../../../../../'
-alias u8='cd ../../../../../../../../'
-
-# Mac stuff
-export CLICOLOR=true  # colored terminal output
-alias battery='ioreg -w0 -l | grep Capacity | cut -d " " -f 17-50'
-source "$homedir/bin/git-completion.bash"
-
-# Brew
-PATH="$PATH:/usr/X11/bin"
-PATH="/usr/local/bin:$PATH"  # usr/local/bin needs to be before /usr/bin
-
-# R
-export R_LIBS="$HOME/.R:$R_LIBS"
-
-# RJB
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home
-
-# Ruby
-alias irbs='irb --simple-prompt'
-
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-cd .  # To source the rvmrc
+if [[ -f "$conf/bash/includes/admin"     ]]; then source "$conf/bash/includes/admin";     fi
+if [[ -f "$conf/bash/includes/aliases"   ]]; then source "$conf/bash/includes/aliases";   fi
+if [[ -f "$conf/bash/includes/foraker"   ]]; then source "$conf/bash/includes/foraker";   fi
+if [[ -f "$conf/bash/includes/functions" ]]; then source "$conf/bash/includes/functions"; fi
+if [[ -f "$conf/bash/includes/mac"       ]]; then source "$conf/bash/includes/mac";       fi
+if [[ -f "$conf/bash/includes/programs"  ]]; then source "$conf/bash/includes/programs";  fi
