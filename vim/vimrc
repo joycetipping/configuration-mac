@@ -94,8 +94,8 @@ endfunction
 "Plugins
 
 "Ctags
-"map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>  "Open in new tab
-map <C-\> :vsp<CR>:exec("tag ".expand("<cword>"))<CR>        "Open in vertical split
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>  "Open in new tab
+"map <C-\> :vsp<CR>:exec("tag ".expand("<cword>"))<CR>        "Open in vertical split
 
 "Nerdtree
 map <F2> :NERDTreeToggle<CR>
