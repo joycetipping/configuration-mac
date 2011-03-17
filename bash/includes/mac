@@ -8,6 +8,9 @@ alias battery='ioreg -w0 -l | grep Capacity | cut -d " " -f 17-50'
 PATH="$PATH:/usr/X11/bin"
 PATH="/usr/local/bin:$PATH"  # usr/local/bin needs to be before /usr/bin
 
+# Capistrano
+export DEPLOY_USER=jdt
+
 # Git
 source "$conf/git/git-completion.bash"
 
