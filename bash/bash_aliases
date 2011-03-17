@@ -1,6 +1,6 @@
 # vim: syntax=sh :
-homedir="$HOME/home"
-conf="$homedir/configuration"
+export homedir="$HOME/home"
+export conf="$homedir/configuration"
 
 if [[ -f "$conf/bash/includes/admin"     ]]; then source "$conf/bash/includes/admin";     fi
 if [[ -f "$conf/bash/includes/aliases"   ]]; then source "$conf/bash/includes/aliases";   fi

@@ -1,8 +1,5 @@
 #!/bin/bash
 
-conf="$HOME/home/configuration"
-homedir="$HOME/home"
-
 ln -sf $conf/vim/vimrc               $HOME/.vimrc
 ln -sf $conf/vim/vim                 $HOME/.vim
 
