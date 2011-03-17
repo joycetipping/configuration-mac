@@ -11,6 +11,5 @@ ln -sf $conf/bash/bash_aliases       $HOME/.bash_aliases
 ln -sf $conf/bash/bash_profile       $HOME/.bash_profile
 
 ln -sf $conf/git/gitconfig           $HOME/.gitconfig
-ln -sf $conf/git/git-completion.bash $homedir/bin/git-completion.bash
 
 rm $HOME/.vim/vim
