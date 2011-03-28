@@ -1,5 +1,8 @@
 #!/bin/bash
 
+export homedir="$HOME/home"
+export conf="$homedir/projects/configuration"
+
 ln -sf $conf/vim/vimrc               $HOME/.vimrc
 ln -sf $conf/vim/vim                 $HOME/.vim
 
