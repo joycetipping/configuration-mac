@@ -10,3 +10,5 @@ source "$conf/bash/prompt"
 export EDITOR=/usr/bin/vim
 export LC_CTYPE=en_US.utf-8
 export TERM=xterm-color
+
+cd $home
