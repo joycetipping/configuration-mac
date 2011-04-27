@@ -103,6 +103,9 @@ map <F2> :NERDTreeToggle<CR>
 "Tlist
 map <F3> :TlistToggle<CR>
 
+"Fugitive
+map <F4> :Gblame<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "Special setups and operating systems
