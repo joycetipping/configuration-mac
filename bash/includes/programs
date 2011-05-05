@@ -1,5 +1,12 @@
 # vim: syntax=sh :
 
+# Brew
+PATH="$PATH:/usr/X11/bin"
+PATH="/usr/local/bin:$PATH"  # usr/local/bin needs to be before /usr/bin
+
+# Git
+source "$conf/git/git-completion.bash"
+
 # R
 export R_LIBS="$HOME/.R:$R_LIBS"
 
