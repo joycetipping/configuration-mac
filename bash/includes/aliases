@@ -9,7 +9,6 @@ alias foraker="vim $conf/bash/includes/foraker"
 alias l='ls -CF'
 alias la="ls -a"
 alias ll="ls -ilh"
-alias ls="ls --color=auto"
 alias lst="ls -tr"
 alias music="cd $home/library/music"
 alias notes="cd $home/library/notes/"
