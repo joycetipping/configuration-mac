@@ -2,8 +2,8 @@
 
 alias clients="ssh -t sultana.boulder.foraker.com 'cd /network_files/clients/;bash'"
 alias designbox="ssh -t designbox@design-workstation.local 'cd Desktop/joyce/;bash'"
-alias ffpro-db="ssh db.fingertipformulary.com"
-alias ffpro-web="ssh web.fingertipformulary.com"
+alias ffdb="ssh db.fingertipformulary.com"
+alias ffweb="ssh web.fingertipformulary.com"
 alias fftest="ssh fingertip.boulder.foraker.com"
 alias rose="ssh joycetipping@rose.local"
 alias sultana="ssh sultana.boulder.foraker.com"
