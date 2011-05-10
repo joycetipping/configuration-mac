@@ -2,16 +2,12 @@
 
 # Bash
 alias battery='ioreg -w0 -l | grep Capacity | cut -d " " -f 17-50'
-alias cdh="cd ~/home/"
 alias cpl="cp -d"
 alias ct="ctags -R"
-alias foraker="vim $conf/bash/includes/foraker"
 alias l='ls -CF'
 alias la="ls -a"
 alias ll="ls -ilh"
 alias lst="ls -tr"
-alias music="cd $home/library/music"
-alias notes="cd $home/library/notes/"
 alias now="date +%Y.%m%d.%H%M"
 alias remove="/bin/rm"
 alias rm="echo Use remove"
@@ -35,6 +31,8 @@ alias vt="vim -t"
 
 # Places
 alias aliases="vim $conf/bash/includes/aliases"
+alias cdh="cd ~/home/"
 alias conf="cd $conf"
+alias foraker="vim $conf/bash/includes/foraker"
 alias music="cd $home/library/music"
 alias notes="cd $home/library/notes/"
