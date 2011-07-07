@@ -25,6 +25,7 @@ alias u8="cd ../../../../../../../../"
 
 # Applications
 alias bc="echo Starting bc -l;echo;bc -l"
+alias brake="bundle exec rake"
 alias sqlite3="sqlite3 -column -header"
 alias sqlite="sqlite3 -column -header"
 alias vt="vim -t"

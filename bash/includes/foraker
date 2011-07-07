@@ -7,6 +7,7 @@ alias ffweb="ssh web.fingertipformulary.com"
 alias fftest="ssh fingertip.boulder.foraker.com"
 alias rose="ssh joycetipping@rose.local"
 alias sultana="ssh sultana.boulder.foraker.com"
+alias startpg="postgres -D /usr/local/Cellar/postgresql/data/"
 
 alias ff='cd ~/home/projects/fingertip/'
 
