@@ -3,6 +3,7 @@
 export home="$HOME/home"
 export conf="$home/projects/configuration"
 
+ln -sf $conf/emacs                   $HOME/.emacs
 ln -sf $conf/vim/vimrc               $HOME/.vimrc
 ln -sf $conf/vim/vim                 $HOME/.vim
 
