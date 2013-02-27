@@ -44,6 +44,7 @@ nnoremap <C-l> :call TabSlideRight()<CR>
 nnoremap <F7>  :call ToggleTerminalCopyPaste()<CR>
 
 com Dws :%s/\s\+$// "Delete whitespace
+com Wpm call WordProcessorMode()
 
 filetype plugin on
 autocmd BufRead,BufNewFile *.markdown,*.md set filetype=markdown
@@ -89,6 +90,17 @@ function! TabSlideRight()
 endfunction
 
 
+function! WordProcessorMode()
+  setlocal formatoptions=1
+  setlocal formatprg=par
+  setlocal linebreak
+  setlocal nolist "Need to disable 'list' to enable 'linebreak'
+  setlocal wrap
+  map j gj
+  map k gk
+endfunction
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Plugins
 
 "Ctags
