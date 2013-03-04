@@ -13,4 +13,6 @@ ln -sf $conf/bash/dir_colors         $HOME/.dir_colors
 
 ln -sf $conf/git/gitconfig           $HOME/.gitconfig
 
+ln -sf $conf/x11/Xmodmap             $HOME/.Xmodmap
+
 rm $HOME/.vim/vim
