@@ -1,8 +1,0 @@
-#!/bin/bash
-
-keybindings='{
-  "Close Tab" = "@~W";
-  "Close Window" = "@$W";
-}'
-
-defaults write net.sourceforge.iTerm NSUserKeyEquivalents "$keybindings"

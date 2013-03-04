@@ -2,7 +2,7 @@
 # Based on the marginally extensible, not very portable Bash prompt by Spencer Tipping
 # WTFPL License ... cheers!
 
-source $conf/bash/prompt-base
+source $conf/bash/includes/prompt-base
 
 function setup_left_and_right {
   # Your customizations go here. The idea is to export $PS1_LEFT and $PS1_RIGHT
