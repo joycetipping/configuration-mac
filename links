@@ -3,16 +3,16 @@
 export home="$HOME/home"
 export conf="$home/projects/configuration"
 
-ln -sf $conf/emacs                   $HOME/.emacs
-ln -sf $conf/vim/vimrc               $HOME/.vimrc
-ln -sf $conf/vim/vim                 $HOME/.vim
+ln -sf $conf/emacs                    $HOME/.emacs
+ln -sf $conf/vim/vimrc                $HOME/.vimrc
+ln -sf $conf/vim/vim                  $HOME/.vim
 
-ln -sf $conf/bash/bashrc             $HOME/.bashrc
-ln -sf $conf/bash/bash_profile       $HOME/.bash_profile
-ln -sf $conf/bash/dir_colors         $HOME/.dir_colors
+ln -sf $conf/bash/bashrc              $HOME/.bashrc
+ln -sf $conf/bash/bash_profile        $HOME/.bash_profile
+ln -sf $conf/bash/dir_colors          $HOME/.dir_colors
 
-ln -sf $conf/git/gitconfig           $HOME/.gitconfig
+ln -sf $conf/git/gitconfig            $HOME/.gitconfig
 
-ln -sf $conf/x11/Xmodmap             $HOME/.Xmodmap
+ln -sf $conf/x11/Xmodmap              $HOME/.Xmodmap
 
 rm $HOME/.vim/vim
