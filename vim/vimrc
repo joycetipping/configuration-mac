@@ -47,6 +47,7 @@ com Dws :%s/\s\+$// "Delete whitespace
 com Wpm call WordProcessorMode()
 
 filetype plugin on
+autocmd BufRead,BufNewFile Gemfile set filetype=ruby
 autocmd BufRead,BufNewFile *.markdown,*.md set filetype=markdown
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
