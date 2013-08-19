@@ -2,7 +2,7 @@
 
 # Count the number of files in a directory
 count () {
-  ls $1 | wc -l
+  ls "$@" | wc -l
 }
 
 # Print all EXIF date fields
