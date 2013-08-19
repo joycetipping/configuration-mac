@@ -2,7 +2,19 @@
 
 # Count the number of files in a directory
 count () {
-  ls "$@" | wc -l
+  if [[ "$#" == "0" ]]
+  then
+    ls | wc -l
+  else
+    for var in "$@";
+    do
+      ls "$var" | wc -l
+    done
+  fi
+}
+
+csum () {
+  count "$@" | awk '{s+=$1} END {print s}'
 }
 
 # Print all EXIF date fields
