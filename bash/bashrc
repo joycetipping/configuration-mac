@@ -32,4 +32,5 @@ source "$conf/bash/includes/prompt"
 
 # Source aliases and program-specific functions
 if [[ -f "$conf/bash/includes/aliases"   ]]; then source "$conf/bash/includes/aliases";   fi
+if [[ -f "$conf/bash/includes/functions" ]]; then source "$conf/bash/includes/functions";   fi
 if [[ -f "$conf/bash/includes/programs"  ]]; then source "$conf/bash/includes/programs";  fi

@@ -1,0 +1,11 @@
+# vim: syntax=sh :
+
+# Count the number of files in a directory
+count () {
+  ls $1 | wc -l
+}
+
+# Print all EXIF date fields
+dates () {
+  exiftool $1 | grep -i 'date'
+}

@@ -3,7 +3,6 @@
 # Bash
 alias battery='ioreg -w0 -l | grep Capacity | cut -d " " -f 17-50'
 alias cpl="cp -d"
-alias count="ls | wc -l"
 alias ct="ctags -R"
 alias l='ls -CF'
 alias la="ls -a"
